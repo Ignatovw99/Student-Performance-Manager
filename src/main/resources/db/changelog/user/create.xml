@@ -23,7 +23,7 @@
             <column name="password" type="varchar(60)">
                 <constraints nullable="false" />
             </column>
-            <column name="birthDate" type="date" />
+            <column name="birth_date" type="date" />
         </createTable>
     </changeSet>
 </databaseChangeLog>
