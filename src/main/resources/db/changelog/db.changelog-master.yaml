@@ -2,7 +2,16 @@ databaseChangeLog:
   - include:
       file: school/create.xml
       relativeToChangelogFile: true
-#
-#  - include:
-#      file: school/constraints.xml
-#      relativeToChangelogFile: true
+  - include:
+      file: user/create.xml
+      relativeToChangelogFile: true
+  - include:
+      file: teacher/create.xml
+      relativeToChangelogFile: true
+
+  - include:
+      file: school/constraints.xml
+      relativeToChangelogFile: true
+  - include:
+      file: teacher/constraints.xml
+      relativeToChangelogFile: true
