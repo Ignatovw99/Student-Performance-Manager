@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - include:
+      file: school/create.xml
+      relativeToChangelogFile: true
+
+  - include:
+      file: school/constraints.xml
+      relativeToChangelogFile: true
