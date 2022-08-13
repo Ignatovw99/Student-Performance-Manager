@@ -1,12 +1,11 @@
 package bg.nbu.sms.school;
 
 import bg.nbu.sms.common.IdEntity;
+import bg.nbu.sms.teacher.Teacher;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "schools")
@@ -20,4 +19,9 @@ public class School extends IdEntity {
     @Column(nullable = false)
     @EqualsAndHashCode.Exclude
     private String address;
+
+    @OneToOne
+    @JoinColumn(unique = true)
+    private Teacher principal;
+
 }

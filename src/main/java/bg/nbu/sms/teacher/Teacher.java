@@ -17,4 +17,5 @@ public class Teacher extends User {
 
     @ManyToOne
     private School school;
+
 }

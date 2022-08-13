@@ -29,4 +29,5 @@ public class User extends IdEntity {
 
     @Column
     private LocalDate birthDate;
+
 }
