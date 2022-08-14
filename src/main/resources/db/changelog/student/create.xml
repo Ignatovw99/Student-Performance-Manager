@@ -12,7 +12,6 @@
                 <constraints primaryKey="true" />
             </column>
             <column name="school_id" type="bigint" />
-            <column name="school_class" type="varchar(255)" />
         </createTable>
     </changeSet>
 </databaseChangeLog>
