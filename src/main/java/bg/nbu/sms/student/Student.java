@@ -3,6 +3,7 @@ package bg.nbu.sms.student;
 import bg.nbu.sms.auth.entity.User;
 import bg.nbu.sms.parent.Parent;
 import bg.nbu.sms.school.School;
+import bg.nbu.sms.schoolclass.SchoolClass;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -23,5 +24,8 @@ public class Student extends User {
 
     @ManyToMany(mappedBy = "children")
     private Set<Parent> parents;
+
+    @ManyToMany(mappedBy = "students")
+    private Set<SchoolClass> classes;
 
 }

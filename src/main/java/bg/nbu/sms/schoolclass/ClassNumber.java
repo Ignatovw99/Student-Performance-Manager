@@ -1,11 +1,11 @@
-package bg.nbu.sms.school;
+package bg.nbu.sms.schoolclass;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Getter
-public enum SchoolClass {
+public enum ClassNumber {
 
     FIRST(1),
     SECOND(2),
