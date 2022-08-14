@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="21-05-2022 14:35" author="Lyuboslav">
+        <comment>Add constraints for School Class-Students table</comment>
+        <addPrimaryKey tableName="school_classes_students"
+                       columnNames="school_class_id,student_id" />
+
+        <addForeignKeyConstraint baseTableName="school_classes_students"
+                                 baseColumnNames="school_class_id"
+                                 constraintName="fk_school_classes_student_class"
+                                 referencedTableName="school_classes"
+                                 referencedColumnNames="id" />
+
+        <addForeignKeyConstraint baseTableName="school_classes_students"
+                                 baseColumnNames="student_id"
+                                 constraintName="fk_school_classes_student_students"
+                                 referencedTableName="students"
+                                 referencedColumnNames="id" />
+    </changeSet>
+</databaseChangeLog>
