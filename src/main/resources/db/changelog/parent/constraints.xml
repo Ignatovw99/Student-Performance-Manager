@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="21-05-2022 14:20" author="Lyuboslav">
+        <comment>Add constraints for Parents table</comment>
+        <addForeignKeyConstraint baseTableName="parents"
+                                 baseColumnNames="id"
+                                 constraintName="fk_parents_users"
+                                 referencedTableName="users"
+                                 referencedColumnNames="id" />
+    </changeSet>
+</databaseChangeLog>
